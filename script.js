@@ -22,14 +22,14 @@ function checkWinner() {
         const [a, b, c] = pattern;
         if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) {
             gameOver = true;
-            alert(`${currentPlayer === 'x' ? 'Крестики' : 'Нолики'} победили!`);
+            alert(`${currentPlayer === 'x' ? 'X' : 'O'} wins!`);
             return;
         }
     }
 
     if (!gameBoard.includes(null)) {
         gameOver = true;
-        alert('Ничья!');
+        alert('It\'s a draw!');
     }
 }
 
